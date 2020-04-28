@@ -1,0 +1,12 @@
+sudo: required
+service:
+  - docker
+
+before_install:
+  - docker build -t nagaraju0503/angularDocker -f Dockerfile.Dev
+script:
+  - docker run  nagaraju0503/angularDocker -- --coverage
+
+
+
+  
